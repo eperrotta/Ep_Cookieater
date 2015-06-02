@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head" before="-">
+            <!--<action method="addJs" ifconfig="cookieater/status"><script>cookieater/cookies-enabler.js</script></action>-->
+            <action method="addItem"><type>skin_css</type><name>css/cookieater/cookieater.css</name><params /></action>
+        </reference>
+
+        <reference name="before_body_end" before="-">
+            <block type="cookieater/popup" name="ep_cookieater" as="cookie.eater" template="cookieater/popup.phtml" />
+        </reference>
+    </default>
+</layout>

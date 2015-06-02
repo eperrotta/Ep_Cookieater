@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Coremodifies Magento Extension
+ * by Kendesign
+ * @category    Kendesign
+ * @package     Kendesign_Coremodifies
+ * @copyright   Copyright (c) 2012 Kendesign (http://www.kendesign.it)
+ */
+-->   
+<config>    
+    <modules>
+        <Ep_Cookieater>
+            <version>0.1.0</version>
+        </Ep_Cookieater>
+    </modules>
+    <frontend>
+    	<!--
+        <translate>
+            <modules>
+                <coremodifies>
+                    <files>
+                        <default>coremodifies.csv</default>
+                    </files>
+                </coremodifies>
+            </modules>
+        </translate>
+        -->
+        <layout>
+            <updates>
+                <cookieater>
+                    <file>ep_cookieater.xml</file>
+                </cookieater>
+            </updates>
+        </layout>
+        <routers>
+            <cookieater>
+                <use>standard</use>
+                <args>
+                    <module>Ep_Cookieater</module>
+                    <frontName>cookieater</frontName>
+                </args>
+            </cookieater>
+        </routers>
+    </frontend>
+	<global>
+		<blocks>
+            <cookieater>
+                <class>Ep_Cookieater_Block</class>
+            </cookieater>
+		</blocks>
+		<models>
+            <cookieater>
+            <class>Ep_Cookieater_Model</class>
+        </cookieater>
+		</models>
+        <helpers>
+            <cookieater>
+                <class>Ep_Cookieater_Helper</class>
+            </cookieater>
+        </helpers>
+        <events>
+            <core_block_abstract_to_html_after>
+                <observers>
+                    <cookieater_html_replacer>
+                        <class>cookieater/observer</class>
+                        <method>replaceHtmlForCookies</method>
+                    </cookieater_html_replacer>
+                </observers>
+            </core_block_abstract_to_html_after>
+            <controller_front_init_before>
+                <observers>
+                    <cookieater_delete>
+                        <class>cookieater/observer</class>
+                        <method>deleteAllCookies</method>
+                    </cookieater_delete>
+                </observers>
+            </controller_front_init_before>
+        </events>
+	</global>
+</config>

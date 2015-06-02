@@ -1,0 +1,36 @@
+<?php if($this->isActionRequired()): ?>
+<div class="ce-popup">
+	<div class="ce-textblock">
+		<?php echo $this->getPopupContent(); ?>
+	</div>
+	<div class="ce-buttonarea">
+		<button type="button" title="<?php echo $this->__('More info and settings') ?>" onclick="showExtendedInfo()">
+			<span><?php echo $this->__('More info and settings') ?></span>
+		</button>
+		<button type="button" title="<?php echo $this->__('Accept and continue') ?>" onclick="acceptCookies()">
+			<span><?php echo $this->__('Accept and continue') ?></span>
+		</button>
+	</div>
+</div>
+<script type="text/javascript">
+	function acceptCookies() {
+		top.location.href = '<?php echo Mage::getUrl('cookieater/cookieater/setCookie', array('accept-all' => 'accept-all')) ?>';
+	}
+	function showExtendedInfo() {
+		top.location.href = '<?php echo Mage::getUrl(Mage::getStoreConfig('cookieater_options/cookieater_configuration/policy_page')) ?>';
+	}
+</script>
+<?php endif; ?>
+<?php
+
+/*
+if (isset($_SERVER['HTTP_COOKIE'])) {
+	$cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+	foreach($cookies as $cookie) {
+		$parts = explode('=', $cookie);
+		$name = trim($parts[0]);
+		setcookie($name, '', time()-1000);
+		setcookie($name, '', time()-1000, '/');
+	}
+}
+*/

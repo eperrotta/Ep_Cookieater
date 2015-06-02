@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <tabs>
+        <cookieater translate="label" module="cookieater">
+            <label>Cookieater</label>
+            <sort_order>100</sort_order>
+        </cookieater>
+    </tabs>
+    <sections>
+        <cookieater_options translate="label" module="cookieater">
+            <label>General settings</label>
+            <tab>cookieater</tab>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <cookieater_configuration translate="label" module="cookieater">
+                    <label>Cookieater options</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1000</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <popup_block>
+                            <label>The block to display in the popup</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>cookieater/admin_system_config_source_block</source_model>
+                        </popup_block>
+                        <policy_page>
+                            <label>The page to link the cookies policy</label>
+                            <frontend_type>select</frontend_type>
+                            <sort_order>5</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <source_model>cookieater/admin_system_config_source_page</source_model>
+                        </policy_page>
+                        <iframe_keywords_blacklist>
+                            <label><![CDATA[
+                            Keywords blacklist for &lt;IFRAME&gt;
+                            ]]></label>
+                            <comment>A list of comma-separated keywords matching the content to block inside the IFRAME tag</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </iframe_keywords_blacklist>
+                        <script_keywords_blacklist>
+                            <label><![CDATA[
+                            Keywords blacklist for &lt;SCRIPT&gt;
+                            ]]></label>
+                            <comment>A list of comma-separated keywords matching the content to block inside the SCRIPT tag</comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </script_keywords_blacklist>
+                    </fields>
+                </cookieater_configuration>
+            </groups>
+        </cookieater_options>
+    </sections>
+</config>

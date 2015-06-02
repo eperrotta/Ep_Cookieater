@@ -1,0 +1,59 @@
+div.ce-popup {
+    position: absolute;
+    top: 0px;
+    background-color: #e7e7e7;
+    width: 100%;
+    z-index: 99999;
+    color: #333;
+    opacity: 0.9;
+    border-bottom: solid 2px #666;
+    padding-bottom: 20px;
+}
+
+div.ce-textblock {
+    margin: 20px;
+}
+
+div.ce-buttonarea {
+    margin-top: 15px;
+}
+
+div.ce-buttonarea button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    padding: 15px;
+    margin: 0 10px;
+    outline: none;
+        -webkit-border-radius: 3px !important;
+        border-radius: 3px;
+}
+
+div.ce-row {
+    clear: both;
+}
+div.ce-inputfield {
+    float: left;
+    display: inline-block;
+    padding: 10px;
+    width: 30px;
+}
+div.ce-input-description {
+    float: left;
+    padding: 10px;
+    width: 80%;
+}
+
+div.ce-input-submit {
+    float: left;
+    display: inline-block;
+    padding: 10px;
+}
+div.ce-input-submit input {
+
+}
+
+div.ce-clear {
+    clear: both;
+}
