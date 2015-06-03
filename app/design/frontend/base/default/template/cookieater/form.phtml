@@ -5,7 +5,7 @@
 			<input type="checkbox" name="accept-tech" id="accept-tech" value="accept-tech" checked="checked" readonly="readonly" disabled />
 		</div>
 		<div class="ce-input-description">
-			<strong>Cookies tecnici:</strong> strettamente necessari per il funzionamento del sito o per consentire all’utente di usufruire dei contenuti e dei servizi da questi richiesti.
+			<?php echo $this->__('<strong>Technical cookies:</strong> necessaries for the website to work properly.'); ?>
 		</div>
 		<div class="ce-clear"></div>
 	</div>
@@ -15,7 +15,7 @@
 			<input type="checkbox" name="accept-prof" id="accept-prof" value="accept-prof" <?php if($this->getIsChecked('accept-prof')) echo 'checked="checked"'; ?>/>
 		</div>
 		<div class="ce-input-description">
-			<strong>Cookies di profilazione:</strong> sono cookies utilizzati per ricordarci di te e di quello che ti piace del nostro sito, in modo da poterti offrire un'esperienza migliorata e suggerirti prodotti che potrebbero interessarti, in base alla tua navigazione precedente.<br />Rifiutando questi cookies la tua esperienza di navigazione potrebbe peggiorare.
+			<?php echo $this->__('<strong>Profiling cookies:</strong> these cookies are used to remember about you and your preferences, in order to offer you a better experience and suggest you products which might interest you.'); ?>
 		</div>
 		<div class="ce-clear"></div>
 	</div>
@@ -25,7 +25,7 @@
 			<input type="checkbox" name="accept-third" id="accept-third" value="accept-third" <?php if($this->getIsChecked('accept-third')) echo 'checked="checked"'; ?> />
 		</div>
 		<div class="ce-input-description">
-			<strong>Cookies di terze parti:</strong> sono cookies che vengono installati da soggetti terzi, come ad esempio YouTube quando guardi un video, o Facebook, se ti piace la nostra pagina. In generale vengono utilizzato dai soggetti terzi per fornire pubblicità in linea con i tuoi gusti.<br />Rifiutando questi cookies non potrai usufruire di alcuni contenuti presenti su questo sito.
+			<?php echo $this->__('<strong>Third-parties cookies:</strong> these cookies are installed by subjects out of our control, like Google, or Facebook. Generally they are used to collect information and provide targeted advertising'); ?>
 		</div>
 		<div class="ce-clear"></div>
 	</div>

@@ -5,10 +5,11 @@ class Ep_Cookieater_Model_Observer extends Mage_Core_Model_Observer {
 	public function replaceHtmlForCookies($observer) {
 
 		/**
-		 * If the privacy cookie wasn't set, or we are in the admin area just return
+		 * If we are in the admin area just return
 		 */
-		if (!isset($_COOKIE['ep_cookieater']) || (Mage::app()->getStore()->isAdmin() || Mage::getDesign()->getArea() == 'adminhtml'))
+		if ((Mage::app()->getStore()->isAdmin() || Mage::getDesign()->getArea() == 'adminhtml'))
 			return;
+
 
 
 		$cookiesAccepted = $_COOKIE['ep_cookieater'];
@@ -59,6 +60,7 @@ class Ep_Cookieater_Model_Observer extends Mage_Core_Model_Observer {
 				)
 				||
 				($blockForKeyword)
+
 			) {
 				/**
 				 * Replace the content of the script block with the dummy text
@@ -111,7 +113,8 @@ class Ep_Cookieater_Model_Observer extends Mage_Core_Model_Observer {
 
 			if (
 				(
-					($cookiesAccepted != 'accept-all') && ($iframeHost != Mage::app()->getFrontController()->getRequest()->getHttpHost())
+					($cookiesAccepted != 'accept-all') &&
+					($iframeHost != Mage::app()->getFrontController()->getRequest()->getHttpHost())
 				) ||
 				($blockForKeyword)
 			) {

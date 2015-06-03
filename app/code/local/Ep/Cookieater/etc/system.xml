@@ -22,6 +22,9 @@
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
+                    <comment><![CDATA[Did my work help you? <strong>Consider supporting me!</strong>
+                    <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MYPMA62CXB5W2" target="_blank">
+                    <img src="https://www.paypalobjects.com/en_GB/i/btn/btn_donate_LG.gif" alt="PayPal – The safer, easier way to pay online." /></a>]]></comment>
                     <fields>
                         <popup_block>
                             <label>The block to display in the popup</label>

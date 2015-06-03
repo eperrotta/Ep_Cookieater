@@ -15,17 +15,15 @@
         </Ep_Cookieater>
     </modules>
     <frontend>
-    	<!--
         <translate>
             <modules>
-                <coremodifies>
+                <cookieater>
                     <files>
-                        <default>coremodifies.csv</default>
+                        <default>ep_cookieater.csv</default>
                     </files>
-                </coremodifies>
+                </cookieater>
             </modules>
         </translate>
-        -->
         <layout>
             <updates>
                 <cookieater>
