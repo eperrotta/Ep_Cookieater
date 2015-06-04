@@ -49,7 +49,14 @@ class Ep_Cookieater_CookieaterController extends Mage_Core_Controller_Front_Acti
 			$cookieLevel = 'accept-all';
 		}
 
-		Mage::getModel('core/cookie')->set('ep_cookieater', $cookieLevel, (86400 * 365));
+		$baseDomain = parse_url(Mage::getBaseUrl (Mage_Core_Model_Store::URL_TYPE_WEB));
+		if($baseDomain)
+			$host = $baseDomain[1];
+//		if($host)
+//			$domainParts = explode('.', $host);
+
+
+		Mage::getModel('core/cookie')->set('ep_cookieater', $cookieLevel, (86400 * 365), '/', $host);
 
 		$redirectUrl = $this->_getRefererUrl();
 		if (empty($redirectUrl))

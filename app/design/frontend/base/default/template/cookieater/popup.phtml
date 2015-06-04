@@ -44,20 +44,7 @@
 		top.location.href = '<?php echo Mage::getUrl('cookieater/cookieater/setCookie', array('accept-all' => 'accept-all')) ?>';
 	}
 	function showExtendedInfo() {
-		top.location.href = '<?php echo Mage::getUrl(Mage::getStoreConfig('cookieater_options/cookieater_configuration/policy_page')) ?>';
+		top.location.href = '<?php echo Mage::getUrl($this->getPolicyLink()) ?>';
 	}
 </script>
-<?php endif; ?>
-<?php
-
-/*
-if (isset($_SERVER['HTTP_COOKIE'])) {
-	$cookies = explode(';', $_SERVER['HTTP_COOKIE']);
-	foreach($cookies as $cookie) {
-		$parts = explode('=', $cookie);
-		$name = trim($parts[0]);
-		setcookie($name, '', time()-1000);
-		setcookie($name, '', time()-1000, '/');
-	}
-}
-*/
+<?php endif;

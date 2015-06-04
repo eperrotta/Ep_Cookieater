@@ -51,5 +51,6 @@ class Ep_Cookieater_Block_Popup extends Mage_Core_Block_Template {
 	public function getPolicyLink() {
 		$link = explode('|', Mage::getStoreConfig('cookieater_options/cookieater_configuration/policy_page'));
 		$popupBlockId = $link[0];
+		return $popupBlockId;
 	}
 }
